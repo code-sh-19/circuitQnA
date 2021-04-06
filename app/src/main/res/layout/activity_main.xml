@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtQ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/back"
+        android:padding="15dp"
+        android:text="Identify PROM is one of many different architectural designs of what type of device?"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtQ"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/back"
+        android:hint="Enter Answer"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/txtResult"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/etA"-->
+<!--        android:text="Result"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:textSize="14sp"-->
+<!--        android:textColor="@color/white"/>-->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2953C5"
+            android:text="Submit"
+            android:layout_margin="10dp" />
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_toRightOf="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2953C5"
+            android:text="Reset"
+            android:layout_margin="10dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RlCorrect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EAEAEA">
+
+        <ImageView
+            android:id="@+id/imgCorrect"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_correct"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/txtSuccess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUCCESS"
+            android:layout_below="@+id/imgCorrect"
+            android:layout_centerHorizontal="true"
+            android:textColor="#61ff61"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/btnNextQ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtSuccess"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="GO to next Question"
+            android:drawableRight="@drawable/ic_right_arrow"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RlWrong"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EAEAEA">
+
+        <ImageView
+            android:id="@+id/imgWrong"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_wrong"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/txtFailure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Failed"
+            android:layout_below="@+id/imgWrong"
+            android:layout_centerHorizontal="true"
+            android:textColor="#FF7271"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/btnTryAgain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtFailure"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Try Again" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
